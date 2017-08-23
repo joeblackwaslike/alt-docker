@@ -1,0 +1,12 @@
+[Unit]
+Description=Alt-Docker Socket for the API
+PartOf=alt-docker.service
+
+[Socket]
+ListenStream=/var/run/alt-docker/docker.sock
+SocketMode=0660
+SocketUser=root
+SocketGroup=docker
+
+[Install]
+WantedBy=sockets.target
